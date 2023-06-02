@@ -1,26 +1,135 @@
-#about-me {
-    color: black; /* for example, if needed at all */
-    /* ...and anything else for content in this section */    
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
-
-.project {
-    color: black; /* for example, if needed at all */
-    /* ...and anything else for content inside this section */
+body{
+    background: #080808;
+    color: #FFFFFF;
 }
-
-/* one for each unique project, below, for example... */
-#project1of3 {
-    color: black; /* for example, if needed at all */
-    /* ...and anything else for content inside this article */
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: contain;
+    background-position: center;
 }
-
-#project2of3 {
-    color: black; /* for example, if needed at all */
-    /* ...and anything else for content inside this article */
+.container{
+    padding: 10px 10%;
 }
-
-#project3of3 {
-    color: black; /* for example, if needed at all */
-    /* ...and anything else for content inside this article */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-/* one for each unique project, above, for example */
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #FF004F;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: -3%;
+    font-size: 75%;
+    color: #00AEFF;
+}
+.header-text h1{
+    margin-top: 60px;
+    font-size: 20px;
+    color: aliceblue;
+}
+.header-text h1 span{
+    color: #3300FF;
+}
+/*-----------about--------------*/
+#about{
+    padding: 80px 0;
+    color: #ABABAB;
+    .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+.about-col-1{
+    flex-basis: 35px;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #F29C07;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #00FF1E;
+    position: relative;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #95FF00;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+*/-----------------experience---------------*/
+#experience{
+    padding: 30px 0;
+}
+.experience-list{
+}
