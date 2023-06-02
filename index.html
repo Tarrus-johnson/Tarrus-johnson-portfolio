@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +8,91 @@ head>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="visibility: hidden;">Starter Portfolio Template</h1>
-    <hr> 
-    <p style="text-align: center;"><strong>Hint</strong>: <em>Organize</em> the information, <a href="https://wecancodeit-materials.netlify.app/exercises/mastery/portfolio-project-1/" target="_blank">according to the assignment instructions</a>.</p>
-    <p style="text-align: center; font-size: smaller;">(And remove these instructions from your markup.)</p>
-    <p style="text-align: center; font-size: smaller;">
-        <a href="https://validator.w3.org/#validate_by_upload" target="_blank">Validate HTML</a> | <a href="https://jigsaw.w3.org/css-validator/#validate_by_upload" target="_blank">Validate CSS</a>
-        (<em>That's helpful!</em>)
-    </p>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpeg" class="logo>"
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Reliable Maintenance Engineer</p>
+            <h1>Hello, My Name Is <span>Tarrus,</span><br> I'm From Norfolk Virginia</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/just me.jpg" style="height: 400px; width: 355px";>
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis incidunt atque laboriosam
+                 accusamus doloribus sunt magnam, in, exercitationem assumenda architecto, repellat veniam animi
+                 corrupti quis similique quo dolorem sit! Odio.</p>
+                 <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('Education')">Education</p>
+                 </div>
+                 <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Amazon</span><br> Maintenance Tech lll</li>
+                        <li><span>UIS Technician</span><br> Opex</li>
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Lyon Shipyard</span><br> 1st Class Outside Machinist</li>
+                        <li><span>BAE Shipyard</span><br> 1ST Class Outside Machinist</li>
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>US ARMY</span><br> 63B Light Wheel Vehicle Mechanic</li>
+                        <li><span>Salem High School</span><br> Carpentry</li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------Experience------------- -->
+<div id="Experience">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/work flow.jpg" style="height: 400px; width: 475px";>
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">Work Life</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis incidunt atque laboriosam
+                 accusamus doloribus sunt magnam, in, exercitationem assumenda architecto, repellat veniam animi
+                 corrupti quis similique quo dolorem sit! Odio.</p>
+                 <img src="images/me.png" style="height: 400px; width: 355px;">
+                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis incidunt atque laboriosam
+                accusamus doloribus sunt magnam, in, exercitationem assumenda architecto, repellat veniam animi
+                corrupti quis similique quo dolorem sit! Odio.</p>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+            }
+            event.currentTarget.classlist.add("active-link")
+    }
+</script>
 </body>
 </html>
