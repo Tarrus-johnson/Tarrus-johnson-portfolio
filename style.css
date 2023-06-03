@@ -92,6 +92,7 @@ nav ul li a:hover::after{
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
+    justify-content: space-between;
 }
 .tab-links{
     margin-right: 50px;
